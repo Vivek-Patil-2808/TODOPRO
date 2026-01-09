@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoPro</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <i class="fas fa-check-circle"></i>
+    <span>TodoPro</span>
+  </div>
+
+  <div class="nav-actions">
+    <button id="theme-toggle" class="dark-btn">
+      <i class="fas fa-moon"></i> Dark Mode
+    </button>
+    <button class="nav-btn" id="about-btn">About</button>
+    <button class="nav-btn" id="contact-btn">Contact</button>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="container">
+
+  <h1>My Todo List</h1>
+
+  <!-- INPUT -->
+  <section class="todo-input-section">
+    <input type="text" id="todo-input" placeholder="Task name">
+    <input type="date" id="due-date">
+    <select id="priority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high" selected>High</option>
+    </select>
+    <button id="add-btn"><i class="fas fa-plus"></i></button>
+  </section>
+
+  <!-- ACTION -->
+  <section class="todo-actions">
+    <button id="clear-completed">
+      <i class="fas fa-broom"></i> Clear Completed
+    </button>
+  </section>
+
+  <!-- LIST -->
+  <ul id="todo-list"></ul>
+
+</main>
+
+<!-- CONTACT CTA (RED AREA YOU MARKED) -->
+<section class="contact-cta">
+  <h3>Have questions or suggestions?</h3>
+  <p>We’d love to hear from you.</p>
+  <button id="contact-cta-btn">
+    <i class="fas fa-paper-plane"></i> Contact Us
+  </button>
+</section>
+
+<!-- ABOUT MODAL -->
+<div class="modal" id="about-modal">
+  <div class="modal-content">
+    <span class="close" data-close="about-modal">&times;</span>
+    <h2>About TodoPro</h2>
+    <p>
+      TodoPro is a modern, productivity-focused task management application built for users who want a simple yet powerful way to organize their daily work. It helps you manage tasks efficiently with priorities, due dates, and a distraction-free interface.
+
+Our goal is to make task management easy, organized, and visually pleasing. Whether it’s personal goals, academic work, or professional tasks, TodoPro ensures everything stays clear and manageable in one place.
+
+Built using modern web technologies, TodoPro focuses on performance, responsiveness, and smooth user interactions — enhanced with clean animations, intuitive controls, and dark & light mode support.
+    </p>
+  </div>
+</div>
+
+<!-- CONTACT MODAL (FORMSPREE CONNECTED) -->
+<div class="modal" id="contact-modal">
+  <div class="contact-card">
+    <span class="close" data-close="contact-modal">&times;</span>
+
+    <h2>Contact Us</h2>
+
+    <form id="contact-form" action="https://formspree.io/f/mgovgdal" method="POST">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+      </div>
+
+      <div class="input-group textarea">
+        <i class="fas fa-comment-dots"></i>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+      </div>
+
+      <button type="submit" class="send-btn">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 TodoPro • Built by Vivek Patil</p>
+
+  <div class="social-links">
+    <a href="https://github.com/Vivek-Patil-2808" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/vivek-patil-a27740374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="LinkedIn Profile">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="mailto:patilvivek082005@gmail.com">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
